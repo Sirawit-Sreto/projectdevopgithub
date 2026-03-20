@@ -1,31 +1,97 @@
+/* กำหนดสีพื้นหลังแบบ Gradient */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+  background: linear-gradient(135deg, #1e1e2f 0%, #0d0d14 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* Container แบบกระจก (Glassmorphism) */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* จัดการโลโก้ */
+.logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.App-logo {
+  height: 120px;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.profile-img {
+  border-radius: 50%;
+  border: 3px solid #61dafb;
+  object-fit: cover;
+  width: 120px;
+}
+
+
+/* ข้อความหัวข้อ */
+.title {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  font-weight: 300;
 }
 
 .heart {
-  color: #ff0000;
+  color: #ff4d4d;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
 }
 
-.small {
-  font-size: 0.75rem;
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* การ์ดชื่อผู้เขียน */
+.author-card {
+  margin: 30px 0;
+  padding: 10px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-name {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #61dafb, #a8dadc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+
+/* ปุ่ม Link */
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #61dafb;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.App-link:hover {
+  background: #61dafb;
+  color: #1e1e2f;
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
 }
