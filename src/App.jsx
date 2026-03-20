@@ -8,6 +8,7 @@ function App() {
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
         </p>
+        <img src="pic.jpg" className="App-logo" alt="logo" />
         <p className="small">
           By SirawitSreto
         </p>
